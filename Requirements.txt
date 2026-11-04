@@ -1,2 +1,0 @@
-hey this is a requirements.txt file for a Python project. It lists all the dependencies needed to run the project. Each line specifies 
-a package and its version. Make sure to install these packages using pip before running the project. 
