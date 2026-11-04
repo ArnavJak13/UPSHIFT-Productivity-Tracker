@@ -9,15 +9,15 @@ import tkinter as tk
 from tkinter import messagebox
 from datetime import date
 
-import database
-from theme import get_theme
-from ui import dashboard
-from ui import calendar_page
-from ui import academics
-from ui import habits
-from ui import finance
-from ui import statistics
-from ui import settings
+from app import database
+from app.theme import get_theme
+from app.ui import dashboard
+from app.ui import calendar_page
+from app.ui import academics
+from app.ui import habits
+from app.ui import finance
+from app.ui import statistics
+from app.ui import settings
 
 
 root = None

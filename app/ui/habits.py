@@ -2,9 +2,9 @@ import tkinter as tk
 from datetime import date
 from tkinter import messagebox
 
-import analytics
-import database
-from ui_helpers import make_page_title, make_metric_card, styled_button, styled_entry
+from app import analytics
+from app import database
+from app.ui_helpers import make_page_title, make_metric_card, styled_button, styled_entry
 
 
 DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]

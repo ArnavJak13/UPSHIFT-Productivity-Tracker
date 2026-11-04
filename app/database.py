@@ -1,4 +1,4 @@
-"""Simple SQLite functions for Pinnacle Tracker.
+"""Simple SQLite functions for UPSHIFT.
 
 This file intentionally uses normal functions instead of classes so the
 student code is easier to follow.

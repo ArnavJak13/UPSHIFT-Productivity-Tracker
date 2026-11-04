@@ -1,9 +1,9 @@
 import tkinter as tk
 from datetime import date
 
-import analytics
-import database
-from ui_helpers import make_page_title, make_metric_card, draw_line_chart, draw_bar_chart, draw_donut_chart
+from app import analytics
+from app import database
+from app.ui_helpers import make_page_title, make_metric_card, draw_line_chart, draw_bar_chart, draw_donut_chart
 
 
 def show(parent, theme, refresh_page=None):

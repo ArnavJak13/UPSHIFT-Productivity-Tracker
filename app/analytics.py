@@ -2,7 +2,7 @@
 
 from datetime import date, timedelta, datetime
 
-import database
+from app import database
 
 
 WEEKDAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]

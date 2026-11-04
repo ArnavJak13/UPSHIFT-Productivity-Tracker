@@ -1,8 +1,8 @@
 import tkinter as tk
 from tkinter import messagebox
 
-import database
-from ui_helpers import make_page_title, styled_button, styled_entry
+from app import database
+from app.ui_helpers import make_page_title, styled_button, styled_entry
 
 
 def show(parent, theme, refresh_page, change_theme):
