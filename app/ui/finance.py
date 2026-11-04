@@ -2,7 +2,7 @@ import tkinter as tk
 from datetime import date
 from tkinter import messagebox
 
-import analytics
+from app import analytics
 from app import database
 from app import date_helpers
 from app.ui_helpers import make_page_title, make_metric_card, styled_button, styled_entry
