@@ -12,10 +12,10 @@ This repository is used by a student project team. Keep changes small, understan
 ## Main Areas
 
 - `main.py`: application startup, navigation, and integration
-- `database.py`: SQLite tables and data operations
-- `analytics.py`: scores, percentages, and statistics calculations
-- `ui/`: individual application screens
-- `ui_helpers.py`: shared visual helpers and chart drawing
+- `app/database.py`: SQLite tables and data operations
+- `app/analytics.py`: scores, percentages, and statistics calculations
+- `app/ui/`: individual application screens
+- `app/ui_helpers.py`: shared visual helpers and chart drawing
 - `tests/`: automated checks
 
 ## Commit Rules

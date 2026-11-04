@@ -3,7 +3,7 @@
 import os
 import tempfile
 
-import database
+from app import database
 
 
 def run_database_tests():

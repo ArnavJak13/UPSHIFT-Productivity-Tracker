@@ -1,153 +1,98 @@
 # UPSHIFT Productivity Tracker
 
-UPSHIFT is a beginner-friendly Python desktop application that brings four everyday tracking areas into one place:
+UPSHIFT is a beginner-friendly Python desktop productivity tracker built as a Python Programming Mini Project.
+
+It combines four tracking areas in one application:
 
 - Calendar
 - Academics
 - Habits
 - Finance
 
-It also includes a Dashboard, Statistics page, and Settings page so users can review progress instead of keeping information scattered across separate notebooks, spreadsheets, or apps.
+It also includes a Dashboard, Statistics page, Settings, and Light/Dark themes.
 
 ## Project Status
 
-The current mini-project scope is feature complete.
+The current mini-project scope is feature complete. Remaining work is mainly final testing, review fixes, presentation preparation, and Windows deployment packaging.
 
-The remaining work before academic submission is mainly:
-
-- final testing
-- bug fixes found during review
-- presentation preparation
-- final Windows deployment packaging
-
-## Core Features
-
-### Dashboard
-
-Shows an overview of recent progress, including habit completion, academic performance, finance status, calendar consistency, XP, and visual summaries.
-
-### Calendar
-
-Users can add dated events, view event names on calendar dates, mark events as completed, and move between months.
-
-All dates shown to the user use **DD/MM/YYYY** format.
-
-### Academics
-
-Users can record subjects, study hours, target hours, assignments, and notes. Historical academic entries remain stored and can be used in progress calculations.
-
-### Habits
-
-Users can create daily or selected-weekday habits, assign categories and XP rewards, mark habits as complete, and track consistency over time.
-
-Habit completion is stored separately by date so historical progress can be calculated correctly.
-
-### Finance
-
-Users can record income, expenses, and savings, organise entries by category, set a monthly budget, and review finance performance.
-
-### Statistics
-
-The Statistics page turns stored data into visual summaries using line charts, bar charts, horizontal bars, and donut charts drawn with Tkinter Canvas.
-
-### Settings
-
-Users can:
-
-- change their display name
-- change their monthly budget
-- switch between Light and Dark mode
-- reset tracker records
-
-## Technology Stack
-
-- Python
-- Tkinter for the desktop GUI
-- SQLite through Python's built-in `sqlite3` module
-- `datetime` and `calendar` for date handling
-- Visual Studio Code for development
-- GitHub for version control and collaboration
-
-The running application does not require NumPy, Pandas, Matplotlib, HTML, CSS, or JavaScript.
-
-## Application Workflow
-
-```text
-User
-  ↓
-Tkinter Interface
-  ↓
-Python Functions
-  ↓
-Database and Analytics
-  ↓
-SQLite Storage
-  ↓
-Dashboard and Statistics
-```
-
-## Project Structure
+## Repository Structure
 
 ```text
 UPSHIFT-Productivity-Tracker/
 │
 ├── main.py
-├── database.py
-├── analytics.py
-├── date_helpers.py
-├── theme.py
-├── ui_helpers.py
 ├── run_tests.py
-├── build_windows.py
 ├── requirements.txt
+├── README.md
 │
-├── ui/
-│   ├── __init__.py
-│   ├── dashboard.py
-│   ├── calendar_page.py
-│   ├── academics.py
-│   ├── habits.py
-│   ├── finance.py
-│   ├── statistics.py
-│   └── settings.py
+├── app/
+│   ├── database.py
+│   ├── analytics.py
+│   ├── date_helpers.py
+│   ├── theme.py
+│   ├── ui_helpers.py
+│   └── ui/
+│       ├── dashboard.py
+│       ├── calendar_page.py
+│       ├── academics.py
+│       ├── habits.py
+│       ├── finance.py
+│       ├── statistics.py
+│       └── settings.py
 │
 ├── tests/
-│   ├── __init__.py
-│   ├── test_analytics.py
-│   └── test_database.py
+│   ├── test_database.py
+│   └── test_analytics.py
 │
-├── START_HERE.md
-├── LEARNING_MAP.md
-└── TEST_REPORT.md
+├── docs/
+│   ├── START_HERE.md
+│   ├── LEARNING_MAP.md
+│   ├── TEST_REPORT.md
+│   └── CONTRIBUTING.md
+│
+└── scripts/
+    └── build_windows.py
 ```
+
+## Folder Guide
+
+### `app/`
+
+Contains the actual application code.
+
+- `database.py`: SQLite storage and data operations
+- `analytics.py`: scores, percentages, XP, and statistics
+- `date_helpers.py`: display and database date conversion
+- `theme.py`: Light and Dark theme colours
+- `ui_helpers.py`: shared Tkinter styling and chart functions
+- `ui/`: individual screens
+
+### `tests/`
+
+Contains automated checks for the database and analytics logic.
+
+### `docs/`
+
+Contains the learning guide, test report, and collaboration instructions.
+
+### `scripts/`
+
+Contains optional build utilities. These are not needed for normal use.
+
+## Technology Stack
+
+- Python
+- Tkinter
+- SQLite using Python's built-in `sqlite3`
+- `datetime` and `calendar`
+- Visual Studio Code
+- GitHub
+
+No third-party Python package is required to run the normal application.
 
 ## How to Run
 
-### 1. Install Python
-
-Install Python 3 on Windows and check it with:
-
-```text
-python --version
-```
-
-If your system uses the Python launcher, use:
-
-```text
-py --version
-```
-
-### 2. Clone or Download the Repository
-
-You can clone the repository with Git or use GitHub's **Code > Download ZIP** option.
-
-### 3. Open the Project Folder
-
-Open the repository folder in Visual Studio Code.
-
-### 4. Start the Application
-
-Run:
+Install Python 3, download or clone the repository, open the repository folder in VS Code, and run:
 
 ```text
 python main.py
@@ -159,23 +104,35 @@ or:
 py main.py
 ```
 
-The app creates its SQLite database automatically on first launch.
+## First Launch
 
-## Local Data Storage
+On first launch, UPSHIFT asks for a display name and monthly budget. It then creates its SQLite database automatically.
 
-User data is stored locally and is not committed to GitHub.
+## Local Data
 
-For compatibility with earlier development versions, the current database location remains:
+User data is stored locally at:
 
 ```text
 %LOCALAPPDATA%\PinnacleTracker\tracker.db
 ```
 
-The folder name is kept internally so existing testers do not lose access to their saved data after the project branding changed to UPSHIFT.
+The older internal folder name is intentionally retained so existing testers continue seeing their saved data after the application was renamed to UPSHIFT.
+
+The database file is excluded from GitHub.
+
+## Date Format
+
+Dates shown to the user use:
+
+```text
+DD/MM/YYYY
+```
+
+Dates are stored internally as `YYYY-MM-DD` for reliable sorting and calculations.
 
 ## Testing
 
-Run the included test suite with:
+Run:
 
 ```text
 python run_tests.py
@@ -187,13 +144,35 @@ or:
 py run_tests.py
 ```
 
-See `TEST_REPORT.md` for the checks performed during the beginner-version rewrite.
+See `docs/TEST_REPORT.md` for the test summary.
 
-## Windows Executable
+## Learning the Code
 
-The source project runs directly with Python.
+Recommended order:
 
-An optional helper file, `build_windows.py`, is included for later Windows executable packaging with PyInstaller. PyInstaller is not required to run the normal Python version.
+1. `main.py`
+2. `app/database.py`
+3. `app/analytics.py`
+4. `app/ui/habits.py`
+5. the remaining files inside `app/ui/`
+
+More guidance is available in `docs/START_HERE.md` and `docs/LEARNING_MAP.md`.
+
+## Main Workflow
+
+```text
+User
+  ↓
+Tkinter Interface
+  ↓
+Python Functions
+  ↓
+Database + Analytics
+  ↓
+SQLite Storage
+  ↓
+Dashboard + Statistics
+```
 
 ## Team
 
@@ -202,30 +181,16 @@ An optional helper file, `build_windows.py`, is included for later Windows execu
 - **Rishan**: frontend and graphical user interface
 - **Nandit**: analytics, progress metrics, and calculations
 
-## Learning and Viva Preparation
+## Windows Build
 
-This version intentionally avoids unnecessary advanced Python patterns so the group can read and explain the application.
+The optional PyInstaller helper is located at:
 
-Start with:
+```text
+scripts/build_windows.py
+```
 
-1. `main.py`
-2. `database.py`
-3. `analytics.py`
-4. one page inside `ui/`
-
-See `START_HERE.md` and `LEARNING_MAP.md` for a guided study order.
-
-## Future Improvements
-
-Possible extensions after the academic submission include:
-
-- reminders and notifications
-- additional productivity modules
-- richer data export and import
-- optional cloud synchronisation
-- improved accessibility
-- installer-based Windows deployment
+It is only needed when preparing the final Windows executable.
 
 ## Academic Project
 
-UPSHIFT was created as a Python Programming Mini Project. The code should be read, tested, understood, and explained by the team during review and viva.
+UPSHIFT was created as a Python Programming Mini Project. The group should understand, test, explain, and be able to modify the code used in the final submission.

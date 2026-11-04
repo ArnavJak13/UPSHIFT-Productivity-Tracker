@@ -18,7 +18,7 @@ The project uses these everywhere:
 ### 1. Imports
 
 ```python
-import database
+from app import database
 from datetime import date
 ```
 

@@ -4,8 +4,8 @@ import os
 import tempfile
 from datetime import date
 
-import analytics
-import database
+from app import analytics
+from app import database
 
 
 def run_analytics_tests():

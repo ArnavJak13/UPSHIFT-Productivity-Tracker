@@ -18,7 +18,7 @@ Do not try to understand every Tkinter option such as fonts, padding, or colors.
 
 ## Day 2: Understand saving data
 
-Open `database.py`.
+Open `app/database.py`.
 
 Start with only:
 
@@ -34,7 +34,7 @@ work using the same idea.
 
 ## Day 3: Understand calculations
 
-Open `analytics.py`.
+Open `app/analytics.py`.
 
 Start with:
 
@@ -47,7 +47,7 @@ These are mostly loops, conditions, lists, and normal functions.
 
 ## Day 4: Understand one complete screen
 
-Open `ui/habits.py`.
+Open `app/ui/habits.py`.
 
 Follow this order:
 
@@ -62,7 +62,7 @@ Once you understand Habits, the other screens follow similar patterns.
 
 ## Ignore this until later
 
-`ui_helpers.py` is mostly styling and chart drawing. It contains more coordinate
+`app/ui_helpers.py` is mostly styling and chart drawing. It contains more coordinate
 math because graphs have to be drawn on a Tkinter Canvas. You do not need to
 start there to understand how the tracker stores and processes data.
 
