@@ -11,10 +11,10 @@ command = [
     "--noconfirm",
     "--windowed",
     "--name",
-    "PinnacleTracker",
+    "UPSHIFT",
     "main.py"
 ]
 
-print("Building Pinnacle Tracker...")
+print("Building UPSHIFT...")
 subprocess.run(command)
 print("Finished. Check the dist folder.")

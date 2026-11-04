@@ -1,4 +1,4 @@
-"""Pinnacle Tracker beginner version.
+"""UPSHIFT Productivity Tracker beginner version.
 
 This file starts the program and controls which page is visible.
 The project intentionally avoids an OOP app class so beginners can follow the
@@ -56,7 +56,7 @@ def show_welcome():
 
     tk.Label(
         card,
-        text="Pinnacle Tracker",
+        text="UPSHIFT",
         font=("Segoe UI", 26, "bold"),
         bg=theme["card"],
         fg=theme["accent"]
@@ -132,7 +132,7 @@ def build_main_layout():
 
     tk.Label(
         sidebar,
-        text="PINNACLE",
+        text="UPSHIFT",
         font=("Segoe UI", 18, "bold"),
         bg=current_theme["sidebar"],
         fg=current_theme["sidebar_text"]
@@ -276,7 +276,7 @@ def start_app():
     database.init_db()
 
     root = tk.Tk()
-    root.title("Pinnacle Tracker")
+    root.title("UPSHIFT Productivity Tracker")
     root.geometry("1240x820")
     root.minsize(1050, 700)
 
