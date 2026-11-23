@@ -1,25 +1,20 @@
-"""UPSHIFT Productivity Tracker beginner version.
 
-This file starts the program and controls which page is visible.
-The project intentionally avoids an OOP app class so beginners can follow the
-program using normal functions and global variables.
-"""
 
 import tkinter as tk
 from tkinter import messagebox
 from datetime import date
-
 from app import database
-from app.theme import get_theme
-from app.ui import dashboard
-from app.ui import calendar_page
-from app.ui import academics
-from app.ui import habits
-from app.ui import finance
-from app.ui import statistics
-from app.ui import settings
 
 
+from app.ui import R_FILE_UI as ui
+get_theme = ui.get_theme
+dashboard = ui.dashboard
+calendar_page = ui.calendar_page
+academics = ui.academics
+habits = ui.habits
+finance = ui.finance
+statistics = ui.statistics
+settings = ui.settings
 root = None
 content_frame = None
 sidebar = None
